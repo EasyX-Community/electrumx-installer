@@ -49,6 +49,10 @@ function install_pyrocksdb {
 	$python -m pip install git+git://github.com/stephan-hof/pyrocksdb.git || _error "Could not install pyrocksdb" 1
 }
 
+function install_x16r_hash {
+	$python -m pip install "x16r_hash"
+}
+
 function install_python_rocksdb {
     $python -m pip install "Cython>=0.20"
 	$python -m pip install python-rocksdb || _error "Could not install python_rocksdb" 1
