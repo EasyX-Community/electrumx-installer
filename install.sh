@@ -224,7 +224,7 @@ if [ $UPDATE_ONLY == 0 ] || [ $UPDATE_PYTHON == 1 ]; then
 		install_leveldb
 	fi
 
-	install_x16r_hash
+	install_x16r-hash
 
 	_status "Installing electrumx"
 	install_electrumx
