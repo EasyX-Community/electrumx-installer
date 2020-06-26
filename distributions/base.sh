@@ -55,7 +55,7 @@ function install_pyrocksdb {
 
 function install_x16r-hash {
 	$python -m pip install x16r-hash x16rv2-hash pyqt5  || _error "Could not install x16r_hash" 1
-	pip3 install x16r-hash x16rv2-hash pyqt5
+	pip install x16r-hash x16rv2-hash pyqt5
 	$python -m pip install .
 }
 
