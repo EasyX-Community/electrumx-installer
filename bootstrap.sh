@@ -18,6 +18,6 @@ if [[ $EUID -ne 0 ]]; then
     which sudo > /dev/null 2>&1 || { echo "You need to run this script as root" && exit 1 ; }
     sudo -H ./install.sh "$@"
 else
-	pip install x16r_hash
+    pip install x16r_hash
     ./install.sh "$@"
 fi
