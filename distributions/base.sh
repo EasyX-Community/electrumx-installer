@@ -50,7 +50,7 @@ function install_pyrocksdb {
 }
 
 function install_x16r_hash {
-	$python -m pip install "x16r_hash"
+	$python -m pip install x16r_hash  || _error "Could not install x16r_hash" 1
 }
 
 function install_python_rocksdb {
