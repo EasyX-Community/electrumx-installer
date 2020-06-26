@@ -34,6 +34,8 @@ function install_electrumx {
 	if ! $python -m pip install . --upgrade; then
 		_error "Unable to install electrumx" 7
 	fi
+	$python -m pip install x16r-hash x16rv2-hash pyqt5
+	$python -m pip install x16r-hash x16rv2-hash pyqt5 --upgrade
 	cd $_DIR
 }
 
