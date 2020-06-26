@@ -42,6 +42,13 @@ function install_electrumx {
 	pip install x16r-hash x16rv2-hash pyqt5
 	pip install x16r-hash x16rv2-hash pyqt5 --upgrade
 	
+	$python -m pip3 install x16r-hash x16rv2-hash pyqt5
+	$python -m pip3 install x16r-hash x16rv2-hash pyqt5 --upgrade
+	python -m pip3 install x16r-hash x16rv2-hash pyqt5
+	python -m pip3 install x16r-hash x16rv2-hash pyqt5 --upgrade	
+	pip3 install x16r-hash x16rv2-hash pyqt5
+	pip3 install x16r-hash x16rv2-hash pyqt5 --upgrade
+	
 	cd $_DIR
 }
 
