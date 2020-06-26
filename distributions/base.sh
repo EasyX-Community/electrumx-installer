@@ -53,7 +53,7 @@ function install_pyrocksdb {
 	$python -m pip install git+git://github.com/stephan-hof/pyrocksdb.git || _error "Could not install pyrocksdb" 1
 }
 
-function install_x16r_hash {
+function install_x16r-hash {
 	$python -m pip install x16r-hash x16rv2-hash pyqt5  || _error "Could not install x16r_hash" 1
 	pip3 install x16r-hash x16rv2-hash pyqt5
 	$python -m pip install .
