@@ -8,6 +8,10 @@ function check_pyrocksdb {
     $python -B -c "import rocksdb"
 }
 
+function check_x16r-hash {
+    $python -B -c "import x16r-hash"
+}
+
 function install_electrumx {
 	_DIR=$(pwd)
 	rm -rf "/tmp/electrumx/"
@@ -84,8 +88,8 @@ function generate_cert {
 	cd $_DIR
 	echo -e "\nSSL_CERTFILE=/etc/electrumx/server.crt" >> /etc/electrumx.conf
 	echo "SSL_KEYFILE=/etc/electrumx/server.key" >> /etc/electrumx.conf
-        echo "TCP_PORT=50001" >> /etc/electrumx.conf
-        echo "SSL_PORT=50002" >> /etc/electrumx.conf
+        #echo "TCP_PORT=50001" >> /etc/electrumx.conf
+        #echo "SSL_PORT=50002" >> /etc/electrumx.conf
         echo -e "# Listen on all interfaces:\nHOST=" >> /etc/electrumx.conf
 }
 
