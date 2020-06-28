@@ -35,20 +35,6 @@ function install_electrumx {
 		_error "Unable to install electrumx" 7
 	fi
 	
-	$python -m pip install x16r-hash x16rv2-hash pyqt5
-	$python -m pip install x16r-hash x16rv2-hash pyqt5 --upgrade
-	python -m pip install x16r-hash x16rv2-hash pyqt5
-	python -m pip install x16r-hash x16rv2-hash pyqt5 --upgrade	
-	pip install x16r-hash x16rv2-hash pyqt5
-	pip install x16r-hash x16rv2-hash pyqt5 --upgrade
-	
-	$python -m pip3 install x16r-hash x16rv2-hash pyqt5
-	$python -m pip3 install x16r-hash x16rv2-hash pyqt5 --upgrade
-	python -m pip3 install x16r-hash x16rv2-hash pyqt5
-	python -m pip3 install x16r-hash x16rv2-hash pyqt5 --upgrade	
-	pip3 install x16r-hash x16rv2-hash pyqt5
-	pip3 install x16r-hash x16rv2-hash pyqt5 --upgrade
-	
 	cd $_DIR
 }
 
@@ -66,12 +52,6 @@ function install_pip {
 function install_pyrocksdb {
 	$python -m pip install "Cython>=0.20"
 	$python -m pip install git+git://github.com/stephan-hof/pyrocksdb.git || _error "Could not install pyrocksdb" 1
-}
-
-function install_x16r-hash {
-	$python -m pip install x16r-hash x16rv2-hash pyqt5  || _error "Could not install x16r_hash" 1
-	pip install x16r-hash x16rv2-hash pyqt5
-	$python -m pip install .
 }
 
 function install_python_rocksdb {
