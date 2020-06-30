@@ -5,11 +5,11 @@ function create_db_dir {
 }
 
 function check_pyrocksdb {
-    $python -B -c "import rocksdb"
+    python -B -c "import rocksdb"
 }
 
 function check_x16r-hash {
-    $python -B -c "import x16r-hash"
+    python -B -c "import x16r-hash"
 }
 
 function install_electrumx {
@@ -31,13 +31,13 @@ function install_electrumx {
 		sed -i "s:usr/bin/env python3:usr/bin/env python3.7:" electrumx_server
 	fi
 	
-	$python -m pip install x16r-hash
-	$python -m pip install x16rv2-hash
-	$python -m pip install x16r_hash
-	$python -m pip install x16rv2_hash
+	python -m pip install x16r-hash
+	python -m pip install x16rv2-hash
+	python -m pip install x16r_hash
+	python -m pip install x16rv2_hash
 	
-	$python -m pip install . --upgrade > /dev/null 2>&1
-	if ! $python -m pip install . --upgrade; then
+	python -m pip install . --upgrade > /dev/null 2>&1
+	if ! python -m pip install . --upgrade; then
 		_error "Unable to install electrumx" 7
 	fi
 	
