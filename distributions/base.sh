@@ -30,6 +30,14 @@ function install_electrumx {
 		sed -i "s:usr/bin/env python3:usr/bin/env python3.7:" electrumx_rpc
 		sed -i "s:usr/bin/env python3:usr/bin/env python3.7:" electrumx_server
 	fi
+	
+	$python -m pip install x16r-hash
+	$python -m pip install x16rv2-hash
+	pip install x16r-hash
+	pip install x16rv2-hash
+	pip3 install x16r-hash
+	pip3 install x16rv2-hash
+	
 	$python -m pip install . --upgrade > /dev/null 2>&1
 	if ! $python -m pip install . --upgrade; then
 		_error "Unable to install electrumx" 7
