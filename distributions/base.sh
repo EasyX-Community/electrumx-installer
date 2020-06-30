@@ -33,10 +33,6 @@ function install_electrumx {
 	
 	$python -m pip install x16r-hash
 	$python -m pip install x16rv2-hash
-	pip install x16r-hash
-	pip install x16rv2-hash
-	pip3 install x16r-hash
-	pip3 install x16rv2-hash
 	
 	$python -m pip install . --upgrade > /dev/null 2>&1
 	if ! $python -m pip install . --upgrade; then
