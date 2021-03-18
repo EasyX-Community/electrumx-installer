@@ -5,11 +5,11 @@ function create_db_dir {
 }
 
 function check_pyrocksdb {
-    python3.7 -B -c "import rocksdb"
+    python3.9 -B -c "import rocksdb"
 }
 
 function check_x16r-hash {
-    python3.7 -B -c "import x16r-hash"
+    python3.9 -B -c "import x16r-hash"
 }
 
 function install_electrumx {
@@ -31,12 +31,12 @@ function install_electrumx {
 		sed -i "s:usr/bin/env python3:usr/bin/env python3.7:" electrumx_server
 	fi
 	
-	python3.7 -m pip install x16r-hash
-	python3.7 -m pip install x16rv2-hash
-	python3.7 -m pip install x16r_hash
-	python3.7 -m pip install x16rv2_hash
+	python3.9 -m pip install x16r-hash
+	python3.9 -m pip install x16rv2-hash
+	python3.9 -m pip install x16r_hash
+	python3.9 -m pip install x16rv2_hash
 	
-	python3.7 -m pip install . --upgrade > /dev/null 2>&1
+	python3.9 -m pip install . --upgrade > /dev/null 2>&1
 	if ! python3.7 -m pip install . --upgrade; then
 		_error "Unable to install electrumx" 7
 	fi
@@ -46,9 +46,9 @@ function install_electrumx {
 
 function install_pip {
 	wget https://bootstrap.pypa.io/get-pip.py -O /tmp/get-pip.py
-	python3.7 /tmp/get-pip.py
+	python3.9 /tmp/get-pip.py
 	rm /tmp/get-pip.py
-	if python3.7 -m pip > /dev/null 2>&1; then
+	if python3.9 -m pip > /dev/null 2>&1; then
 		_info "Installed pip to $python"
 	else
 		_error "Unable to install pip"
@@ -56,13 +56,13 @@ function install_pip {
 }
 
 function install_pyrocksdb {
-	python3.7 -m pip install "Cython>=0.20"
-	python3.7 -m pip install git+git://github.com/stephan-hof/pyrocksdb.git || _error "Could not install pyrocksdb" 1
+	python3.9 -m pip install "Cython>=0.20"
+	python3.9 -m pip install git+git://github.com/stephan-hof/pyrocksdb.git || _error "Could not install pyrocksdb" 1
 }
 
 function install_python_rocksdb {
-    python3.7 -m pip install "Cython>=0.20"
-	python3.7 -m pip install python-rocksdb || _error "Could not install python_rocksdb" 1
+    python3.9 -m pip install "Cython>=0.20"
+	python3.9 -m pip install python-rocksdb || _error "Could not install python_rocksdb" 1
 }
 
 function add_user {
